@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi City Map Viewer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="map-card">
+        <h2 class="card-titile">Hotel Location Explorer</h2>
+        <p class="card-subtitle">Select a city to preview our hotel location or check your current position.</p>
+        <div class="button-group">
+
+            <button class="btn" onclick="showcity(27.5570, 68.2028, 'Larkana')">Larkana</button>
+            <button class="btn" onclick="showcity(24.8607, 67.0011, 'Karachi')">Karachi</button>
+            <button class="btn" onclick="showcity(33.6844, 73.0479, 'Islamabad')">Islamabad</button>
+            <button class="btn" onclick="showcity(31.5204, 74.3587, 'Lahore')">Lahore</button>
+            <button class="btn" onclick="showcity(34.0151, 71.5249, 'Peshawar')">Peshawar</button>
+            <button class="btn btn-primary" onclick="getMyLocation()">My Current Location</button>
+            <h3 class="text">Showing Location Name</h3>
+        </div>
+        <h3 class="text">Showing Map For: <span id="cityName">Larkana</span></h3>
+        <div class="map-wrapper">
+            <iframe id="mapFrame"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=68.1928%2C27.5470%2C68.2128%2C27.5670&layer=mapnik&marker=27.5570%2C68.2028"
+                loading="lazy">
+            </iframe>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
